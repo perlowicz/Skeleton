@@ -45,7 +45,7 @@
         <copy-rename-maven-plugin.version>1.0.1</copy-rename-maven-plugin.version>
         <maven-resources-plugin.version>3.3.1</maven-resources-plugin.version>
         <maven-remote-resources-plugin.version>3.1.0</maven-remote-resources-plugin.version>
-        <openapi-generator-maven-plugin.version>7.0.1</openapi-generator-maven-plugin.version>
+        <openapi-generator-maven-plugin.version>7.13.0</openapi-generator-maven-plugin.version>
     </properties>
 
     <modules>
@@ -53,6 +53,7 @@
         <module>commons-api</module>
         <module>user-service</module>
         <module>discovery-server</module>
+        <module>commons</module>
     </modules>
 
     <dependencyManagement>

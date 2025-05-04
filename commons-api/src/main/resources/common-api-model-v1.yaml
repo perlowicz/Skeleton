@@ -1,6 +1,6 @@
 openapi: 3.0.1
 info:
-  title: Ecommerce OpenAPI definition
+  title: Common OpenAPI definition
   version: v1
 
 tags:
