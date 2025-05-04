@@ -1,0 +1,107 @@
+openapi: 3.0.1
+info:
+  title: Ecommerce OpenAPI definition
+  version: v1
+
+tags:
+  - name: mock
+
+paths:
+  /common:
+    get:
+      tags:
+        - mock
+      operationId: mock
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: mock
+        '400':
+          $ref: "#/components/responses/badRequest"
+        '401':
+          $ref: "#/components/responses/unauthorized"
+        '403':
+          $ref: "#/components/responses/forbidden"
+        '404':
+          $ref: "#/components/responses/notFound"
+        '500':
+          $ref: "#/components/responses/internalServerError"
+
+components:
+  responses:
+    notFound:
+      description: Not Found
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ErrorResponse"
+    badRequest:
+      description: Bad Request
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ErrorResponse"
+    unauthorized:
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ErrorResponse"
+    forbidden:
+      description: Forbidden
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ErrorResponse"
+    internalServerError:
+      description: Forbidden
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ErrorResponse"
+  schemas:
+    ErrorResponse:
+      type: object
+      properties:
+        timestamp:
+          type: string
+          format: date-time
+        status:
+          type: integer
+          format: int32
+        errorMessage:
+          type: string
+        path:
+          type: string
+        errorDetails:
+          type: array
+          items:
+            "$ref": "#/components/schemas/ErrorDetail"
+    ErrorDetail:
+      type: object
+      properties:
+        message:
+          type: string
+        code:
+          type: string
+    PageResponse:
+      type: object
+      properties:
+        pageNo:
+          type: integer
+          format: int32
+        pageSize:
+          type: integer
+          format: int32
+        totalPages:
+          type: integer
+          format: int32
+        totalElements:
+          type: integer
+          format: int64
+        last:
+          type: boolean
