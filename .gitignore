@@ -1,3 +1,4 @@
 /.idea/
 /gateway/target/
 /commons-api/target/
+/user-service/target/

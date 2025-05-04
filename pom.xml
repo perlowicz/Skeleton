@@ -51,6 +51,7 @@
 <!--        <module>gateway</module>-->
         <module>gateway</module>
         <module>commons-api</module>
+        <module>user-service</module>
     </modules>
 
     <dependencyManagement>

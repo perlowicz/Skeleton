@@ -8,9 +8,9 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>gateway</artifactId>
+    <artifactId>user-service</artifactId>
     <version>${revision}</version>
-    <name>gateway</name>
+    <name>user-service</name>
 
     <dependencies>
         <dependency>
@@ -23,5 +23,4 @@
             <version>${revision}</version>
         </dependency>
     </dependencies>
-
 </project>
