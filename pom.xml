@@ -39,6 +39,7 @@
         <springdoc.version>2.0.4</springdoc.version>
         <jackson-databind-nullable.version>0.2.6</jackson-databind-nullable.version>
         <javafaker.version>1.0.2</javafaker.version>
+        <spring-euereka-version>4.0.0</spring-euereka-version>
 
         <!--plugin versions-->
         <copy-rename-maven-plugin.version>1.0.1</copy-rename-maven-plugin.version>
@@ -48,10 +49,10 @@
     </properties>
 
     <modules>
-<!--        <module>gateway</module>-->
         <module>gateway</module>
         <module>commons-api</module>
         <module>user-service</module>
+        <module>discovery-server</module>
     </modules>
 
     <dependencyManagement>
@@ -97,6 +98,11 @@
                 <groupId>com.github.javafaker</groupId>
                 <artifactId>javafaker</artifactId>
                 <version>${javafaker.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+                <version>${spring-euereka-version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
