@@ -4,6 +4,14 @@ server:
 spring:
   application:
     name: user-service
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3307/user_service
+    username: user_service_user
+    password: "user_service_password"
+  data:
+    jdbc:
+      dialect: mysql
 
 eureka:
   client:
