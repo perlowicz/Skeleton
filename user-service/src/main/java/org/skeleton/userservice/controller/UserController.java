@@ -25,11 +25,6 @@ public class UserController implements DefaultApi {
     }
 
     @Override
-    public User getCurrentUser() {
-        return null;
-    }
-
-    @Override
     public User getUserById(Integer id) {
         return null;
     }

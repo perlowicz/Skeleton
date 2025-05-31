@@ -1,7 +1,7 @@
 server:
   port: 8082
-#  servlet:
-#    context-path: /userService
+  servlet:
+    context-path: /userService
 
 spring:
   application:
@@ -26,3 +26,8 @@ spring:
 jwt:
   secret: "c3VwZXItc2VjdXJlLXNlY3JldC1rZXktc3RyaW5nMTIzIQ=="
   expiration-ms: 3600000  # 1 hour
+
+logging:
+  level:
+    org.springframework.security: DEBUG
+    org.springframework.security.web: DEBUG
